@@ -21,9 +21,9 @@ The keys in somewhat order of importance:
 1.  White space (Blank, Tab, Enter)
 1.  Backspace, Delete, Escape
 1.  Punctuation symbols (`,.;:'"!?()`)
-1.  Programming symbols (`/~``|+=-_|\@#$%^&*[]{}`)
+1.  Programming symbols (`/~\`|+=-_\\@#$%^&*[]{}`)
 1.  Upper-case ASCII letters (`ABC`...`Z`)
-1.  Digits
+1.  Digits (`01`...`9`)
 1.  Modifier keys (Ctrl, Alt, Command/Menu/Win)
 1.  Cursor position manipulation (Arrow keys, Page Up, Page Down, Home, End)
 1.  Lower-case European letters
@@ -34,4 +34,5 @@ The keys in somewhat order of importance:
 Also, I prefer that each group of keys follows the traditional QWERTY layout, simply because it makes switching between keyboards less stressful.
 
 The raw layout of keys:
+
 ![Layout template](split-staggered-column-template.svg)
