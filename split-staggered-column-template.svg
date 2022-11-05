@@ -14,10 +14,13 @@
     <use href="#column" transform="translate(150,15)"/>
     <use href="#column" transform="translate(195,30)"/>
     <use href="#column" transform="translate(240,35)"/>
+    <rect x="260" y="150" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
+    <rect x="335" y="100" width="40" height="60" rx="5" ry="5" transform="rotate(25)"/>
+    <rect x="400" y="40" width="40" height="60" rx="5" ry="5" transform="rotate(35)"/>
   </g>
 </defs>
 
-<use href="#left-hand" transform="translate(40,10) rotate(10)"/>
-<use href="#left-hand" transform="translate(800,10) scale(-1,1) rotate(10)"/>
+<use href="#left-hand" transform="translate(80,10) rotate(20)"/>
+<use href="#left-hand" transform="translate(600,10) scale(-1,1) rotate(20)"/>
 
 </svg>
