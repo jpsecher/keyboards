@@ -29,7 +29,8 @@
 
 <use href="#left-hand" transform="translate(80,10) rotate(20)"/>
 <use href="#left-hand" transform="translate(600,10) scale(-1,1) rotate(20)"/>
-<text x="328" y="178" transform="rotate(20)">1U</text>
-<text x="550" y="90" transform="rotate(35)">1.5U</text>
-
+<g font-size="9" fill="black">
+  <text x="340" y="185" transform="rotate(20)">1U</text>
+  <text x="572" y="95" transform="rotate(35)">1.5U</text>
+</g>
 </svg>
