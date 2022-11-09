@@ -35,4 +35,6 @@ Also, I prefer that each group of keys follows the traditional QWERTY layout, si
 
 The raw layout of keys:
 
+![Layout template](small-split-staggered-column-template.svg)
+
 ![Layout template](split-staggered-column-template.svg)
