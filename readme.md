@@ -35,6 +35,15 @@ Also, I prefer that each group of keys follows the traditional QWERTY layout, si
 
 The raw layout of keys:
 
-![Layout template](small-split-staggered-column-template.svg)
-
 ![Layout template](split-staggered-column-template.svg)
+
+## Small Layout
+
+![Small Layout](small-split-staggered-column-template.svg)
+
+Each thumb key has a one-shot function and a held-down function, denoted as OneShot/HeldDown:
+
+|Shift/Shift|AltGr/Symbol|
+|Tab/Control|Space/Navigate|
+|Enter/Alt|Backspace/Numeric|
+|Escacpe/Meta|Delete/Shift|
