@@ -46,4 +46,8 @@ Each thumb key has a one-shot function and a held-down function, denoted as OneS
 | Escape/Control | Delete/Control |
 | Space/NavMacro | Backspace/Shift |
 | Tab/SymNum     | Enter/Alt |
-| Shift          | AltGr/GUI |
+| Shift/         | AltGr/ |
+
+The round outlined shapes are not actual keys, but OS-switch/debug buttons.
+
+![Full keymap](minion.pdf)
