@@ -13,16 +13,16 @@
     <use href="#column" transform="translate(150,-15)"/>
     <use href="#column" transform="translate(195,0)"/>
     <use href="#column" transform="translate(240,10)"/>
-    <rect x="240" y="85" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
-    <rect x="310" y="10" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
-    <rect x="358" y="-82" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
-    <rect x="380" y="-185" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
+    <rect x="240" y="80" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
+    <rect x="310" y="5" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
+    <rect x="358" y="-87" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
+    <rect x="380" y="-190" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
   </g>
 </defs>
 <use href="#left-hand" transform="translate(80,10) rotate(22)"/>
 <use href="#left-hand" transform="translate(610,10) scale(-1,1) rotate(22)"/>
 <g font-size="9" fill="black">
   <text x="340" y="-15" transform="rotate(22)">1U</text>
-  <text x="380" y="-50" transform="rotate(52)">1.5U</text>
+  <text x="380" y="-55" transform="rotate(52)">1.5U</text>
 </g>
 </svg>
