@@ -35,11 +35,7 @@ The keys in somewhat order of importance:
 
 Also, I prefer that each group of keys follows the traditional QWERTY layout, simply because it makes switching between keyboards less stressful.
 
-The raw layout of keys:
-
-![Small Layout](minion.svg)
-
-Each thumb key has a one-shot function and a held-down function, denoted as OneShot/HeldDown:
+There are four keys for each thumb.  Each thumb key has a one-shot function and a held-down function, denoted as OneShot/HeldDown:
 
 | Left           | Right |
 | ----           | ----- |
@@ -48,6 +44,20 @@ Each thumb key has a one-shot function and a held-down function, denoted as OneS
 | Tab/SymNum     | Enter/Alt |
 | Shift/         | AltGr/ |
 
+## V0
+
+The raw layout of keys:
+
+![V0 Layout](v0/minion.svg)
+
 The round outlined shapes are not actual keys, but OS-switch/debug buttons.
 
-![Full keymap](minion.pdf)
+![V0 keymap](v0/minion.pdf)
+
+## V1
+
+The raw layout of keys:
+
+![V1 Layout](v1/minion.svg)
+
+The round outlined shapes are not actual keys, but OS-switch/debug buttons.
