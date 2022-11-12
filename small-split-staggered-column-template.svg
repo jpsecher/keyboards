@@ -1,29 +1,28 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
   width="700" height="500">
 <defs>
-  <g id="small-column" stroke="black" stroke-width="2" fill="white">
+  <g id="column" stroke="black" stroke-width="2" fill="white">
+    <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
   </g>
   <g id="left-hand" stroke="black" stroke-width="2" fill="white">
-    <rect x="0" y="160" width="40" height="40" rx="5" ry="5" transform="rotate(-5)"/>
-    <use href="#small-column" transform="translate(50,65) rotate(-5)"/>
-    <use href="#small-column" transform="translate(105,30)"/>
-    <use href="#small-column" transform="translate(150,10)"/>
-    <use href="#small-column" transform="translate(195,30)"/>
-    <use href="#small-column" transform="translate(240,35)"/>
-    <rect x="260" y="150" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
-    <rect x="335" y="100" width="40" height="60" rx="5" ry="5" transform="rotate(25)"/>
-    <rect x="400" y="40" width="40" height="60" rx="5" ry="5" transform="rotate(35)"/>
-    <rect x="455" y="-35" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
+    <rect x="2" y="105" width="40" height="40" rx="5" ry="5" transform="rotate(-5)"/>
+    <use href="#column" transform="translate(53,55) rotate(-5)"/>
+    <use href="#column" transform="translate(105,0)"/>
+    <use href="#column" transform="translate(150,-15)"/>
+    <use href="#column" transform="translate(195,0)"/>
+    <use href="#column" transform="translate(240,10)"/>
+    <rect x="240" y="85" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
+    <rect x="310" y="10" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
+    <rect x="358" y="-82" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
+    <rect x="380" y="-185" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
   </g>
 </defs>
-
-<use href="#left-hand" transform="translate(80,10) rotate(20)"/>
-<use href="#left-hand" transform="translate(600,10) scale(-1,1) rotate(20)"/>
+<use href="#left-hand" transform="translate(80,10) rotate(22)"/>
+<use href="#left-hand" transform="translate(610,10) scale(-1,1) rotate(22)"/>
 <g font-size="9" fill="black">
-  <text x="340" y="185" transform="rotate(20)">1U</text>
-  <text x="572" y="95" transform="rotate(35)">1.5U</text>
+  <text x="340" y="-15" transform="rotate(22)">1U</text>
+  <text x="380" y="-50" transform="rotate(52)">1.5U</text>
 </g>
 </svg>
