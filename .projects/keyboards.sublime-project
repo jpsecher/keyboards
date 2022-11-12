@@ -1,0 +1,19 @@
+{ "build_systems":
+  [ { "name": "Firmware"
+    , "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)"
+    , "shell_cmd": "\"python\" -u \"$file\""
+    }
+  ]
+, "folders":
+  [ { "folder_exclude_patterns":
+      [ ".pytest_cache"
+      , "qmk_firmware"
+      , "venv"
+      ]
+    , "file_exclude_patterns":
+      [ "*.zip"
+      ]
+    , "path": ".."
+    }
+  ]
+}
