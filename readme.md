@@ -44,20 +44,13 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 | Tab/SymNum     | Enter/Alt |
 | Shift/         | AltGr/ |
 
-## V0
-
-The raw layout of keys:
-
-![V0 Layout](v0/minion.svg)
-
-The round outlined shapes are not actual keys, but OS-switch/debug buttons.
-
-![V0 keymap](v0/minion.pdf)
-
 ## V1
 
 The raw layout of keys:
 
 ![V1 Layout](v1/minion.svg)
 
-The round outlined shapes are not actual keys, but OS-switch/debug buttons.
+The round outlined shapes are not actual keys, but OS-switch/debug buttons.  The middle ring is a track ball.
+
+![V1 keymap](v1/minion.pdf)
+

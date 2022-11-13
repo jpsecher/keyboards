@@ -13,8 +13,14 @@
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
   </g>
+  <g id="tetris-column" stroke="black" stroke-width="2" fill="white">
+    <rect x="-45" y="60" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
+  </g>
   <g id="left-hand" stroke="black" stroke-width="2" fill="white">
-    <use href="#short-column" transform="translate(40,9) rotate(-10)"/>
+    <use href="#tetris-column" transform="translate(40,9) rotate(-10)"/>
     <use href="#short-column" transform="translate(105,-40)"/>
     <use href="#long-column" transform="translate(150,-15)"/>
     <use href="#short-column" transform="translate(195,-45)"/>
@@ -25,12 +31,12 @@
     <rect x="363" y="-198" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
   </g>
 </defs>
-<use href="#left-hand" transform="translate(40,10) rotate(22)"/>
+<use href="#left-hand" transform="translate(50,10) rotate(25)"/>
 <circle cx="320" cy="225" r="18" stroke="black" stroke-width="2" fill="white"/>
-<use href="#left-hand" transform="translate(600,10) scale(-1,1) rotate(22)"/>
+<use href="#left-hand" transform="translate(590,10) scale(-1,1) rotate(25)"/>
 <g font-size="9" fill="black">
-  <text x="165" y="140" transform="rotate(22)">1.00</text>
-  <text x="210" y="185" transform="rotate(22)">1.50</text>
-  <text x="290" y="120" transform="rotate(37)">1.25</text>
+  <text x="166" y="133" transform="rotate(25)">1.00</text>
+  <text x="211" y="177" transform="rotate(25)">1.50</text>
+  <text x="290" y="110" transform="rotate(40)">1.25</text>
 </g>
 </svg>
