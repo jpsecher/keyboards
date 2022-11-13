@@ -5,7 +5,7 @@
     <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="60" rx="5" ry="5"/>
   </g>
   <g id="short-column" stroke="black" stroke-width="2" fill="white">
     <circle cx="20" cy="20" r="18" stroke-dasharray="5,5"/>
@@ -19,17 +19,18 @@
     <use href="#long-column" transform="translate(150,-15)"/>
     <use href="#short-column" transform="translate(195,-45)"/>
     <use href="#short-column" transform="translate(240,-35)"/>
-    <rect x="240" y="80" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
-    <rect x="310" y="5" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
-    <rect x="358" y="-87" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
-    <rect x="380" y="-190" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
+    <rect x="234" y="75" width="40" height="50" rx="5" ry="5" transform="rotate(15)"/>
+    <rect x="300" y="-10" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
+    <rect x="344" y="-100" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
+    <rect x="363" y="-198" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
   </g>
 </defs>
-<use href="#left-hand" transform="translate(80,10) rotate(22)"/>
-<circle cx="350" cy="225" r="18" stroke="black" stroke-width="2" fill="white"/>
-<use href="#left-hand" transform="translate(620,10) scale(-1,1) rotate(22)"/>
+<use href="#left-hand" transform="translate(40,10) rotate(22)"/>
+<circle cx="320" cy="225" r="18" stroke="black" stroke-width="2" fill="white"/>
+<use href="#left-hand" transform="translate(600,10) scale(-1,1) rotate(22)"/>
 <g font-size="9" fill="black">
-  <text x="250" y="150" transform="rotate(22)">1U</text>
-  <text x="325" y="110" transform="rotate(37)">1.5U</text>
+  <text x="165" y="140" transform="rotate(22)">1.00</text>
+  <text x="210" y="185" transform="rotate(22)">1.50</text>
+  <text x="290" y="120" transform="rotate(37)">1.25</text>
 </g>
 </svg>
