@@ -1,29 +1,24 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
   width="700" height="500">
 <defs>
-  <g id="column" stroke="black" stroke-width="2" fill="white">
-    <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-  </g>
   <g id="long-column" stroke="black" stroke-width="2" fill="white">
     <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
   </g>
-  <g id="hidden-column" stroke="black" stroke-width="2" fill="white">
-    <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
+  <g id="short-column" stroke="black" stroke-width="2" fill="white">
+    <circle cx="20" cy="20" r="18" stroke-dasharray="5,5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-    <circle cx="20" cy="155" r="18" stroke-dasharray="5,5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
   </g>
   <g id="left-hand" stroke="black" stroke-width="2" fill="white">
-    <use href="#hidden-column" transform="translate(53,55) rotate(-5)"/>
-    <use href="#hidden-column" transform="translate(105,5)"/>
+    <use href="#short-column" transform="translate(40,9) rotate(-10)"/>
+    <use href="#short-column" transform="translate(105,-40)"/>
     <use href="#long-column" transform="translate(150,-15)"/>
-    <use href="#column" transform="translate(195,0)"/>
-    <use href="#column" transform="translate(240,10)"/>
+    <use href="#short-column" transform="translate(195,-45)"/>
+    <use href="#short-column" transform="translate(240,-35)"/>
     <rect x="240" y="80" width="40" height="60" rx="5" ry="5" transform="rotate(15)"/>
     <rect x="310" y="5" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
     <rect x="358" y="-87" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
@@ -31,9 +26,10 @@
   </g>
 </defs>
 <use href="#left-hand" transform="translate(80,10) rotate(22)"/>
-<use href="#left-hand" transform="translate(610,10) scale(-1,1) rotate(22)"/>
+<circle cx="350" cy="225" r="18" stroke="black" stroke-width="2" fill="white"/>
+<use href="#left-hand" transform="translate(620,10) scale(-1,1) rotate(22)"/>
 <g font-size="9" fill="black">
-  <text x="340" y="-15" transform="rotate(22)">1U</text>
-  <text x="380" y="-55" transform="rotate(52)">1.5U</text>
+  <text x="250" y="150" transform="rotate(22)">1U</text>
+  <text x="325" y="110" transform="rotate(37)">1.5U</text>
 </g>
 </svg>
