@@ -5,7 +5,7 @@
     <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="135" width="40" height="60" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5" stroke-dasharray="5,5"/>
   </g>
   <g id="short-column" stroke="black" stroke-width="2" fill="white">
     <circle cx="20" cy="20" r="18" stroke-dasharray="5,5"/>
@@ -36,7 +36,7 @@
 <use href="#left-hand" transform="translate(590,10) scale(-1,1) rotate(25)"/>
 <g font-size="9" fill="black">
   <text x="166" y="133" transform="rotate(25)">1.00</text>
-  <text x="211" y="177" transform="rotate(25)">1.50</text>
   <text x="290" y="110" transform="rotate(40)">1.25</text>
+  <text x="349" y="-7" transform="rotate(60)">1.50</text>
 </g>
 </svg>

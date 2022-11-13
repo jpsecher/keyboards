@@ -50,7 +50,7 @@ The raw layout of keys:
 
 ![V1 Layout](v1/minion.svg)
 
-The round outlined shapes are not actual keys, but OS-switch/debug buttons.  The middle ring is a track ball.
+The round outlined shapes are not actual keys, but OS-switch and debug buttons.  The middle ring is a track ball.  The outlined rectangular keys are optional.
 
 ![V1 keymap](v1/minion.pdf)
 
