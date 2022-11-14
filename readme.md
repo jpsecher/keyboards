@@ -54,3 +54,7 @@ The round outlined shapes are not actual keys, but OS-switch and debug buttons. 
 
 ![V1 keymap](v1/minion.pdf)
 
+### Problems
+
+Sublime: C-A-P, C-Tab, S-Tab
+WM: A-Tab
