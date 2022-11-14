@@ -55,14 +55,14 @@
       "BL_TOGG",
       "KC_NO",
       "KC_NO",
-      "LCTL_T(KC_ESC)",
-      "LT(1,KC_SPC)",
-      "LT(2,KC_ENT)",
-      "OSM(MOD_LSFT)",
-      "OSM(MOD_RALT)",
-      "LGUI_T(KC_TAB)",
+      "LCTL_T(KC_DEL)",
       "LALT_T(KC_BSPC)",
-      "LCTL_T(KC_DEL)"
+      "LGUI_T(KC_TAB)",
+      "OSM(MOD_RALT)",
+      "OSM(MOD_LSFT)",
+      "LT(2,KC_ENT)",
+      "LT(1,KC_SPC)",
+      "LCTL_T(KC_ESC)"
     ],
     [
       "KC_NO",
@@ -113,14 +113,14 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
       "KC_TRNS",
-      "KC_NO",
-      "KC_NO",
+      "KC_TRNS",
+      "KC_TRNS",
       "LSFT_T(KC_ENT)",
+      "KC_NO",
+      "KC_NO",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS"
+      "KC_NO"
     ],
     [
       "KC_NO",
@@ -171,14 +171,14 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS"
+      "KC_NO",
+      "KC_NO"
     ]
   ],
   "author": "jpsecher"
