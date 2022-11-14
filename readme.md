@@ -17,32 +17,23 @@ The keyboard should use standard hot-swappable Cherry MX keys.  And to ease expe
 
 ## Layers
 
-The keys in somewhat order of importance:
+Contexts:
 
-1.  Lower-case ASCII letters (`abc`...`z`)
-1.  White space (Blank, Tab, Enter)
-1.  Backspace, Delete, Escape
-1.  Punctuation symbols (`,.;:'"!?()`)
-1.  Programming symbols (`/~\`|+=-_\\@#$%^&*[]{}`)
-1.  Upper-case ASCII letters (`ABC`...`Z`)
-1.  Digits (`01`...`9`)
-1.  Modifier keys (Ctrl, Alt, Command/Menu/Win)
-1.  Cursor position manipulation (Arrow keys, Page Up, Page Down, Home, End)
-1.  Lower-case European letters
-1.  Upper-case European letters
-1.  Function keys (F1 ... F12)
-1.  Media keys (Play/Pause, Next, Previous, Volume Up, Volume Down)
+  1.  Programming (standard languages) in non-modal text editor.
+  1.  Documentation (Markdown) in non-modal editor.
+  1.  Terminal (shell) operations.
+  1.  Window manager navigation.
+  1.  Music control (easy identification of Play/Pause key at a glance)
+
+And:
+
+- Function keys are important in my text editor.
+- Editor usually inserts ending parenthesis/brace/bracket automatically.
+- I don't care about RGB LEDs, as long as I can turn them off.
+- I use Nordic/German/Greek letters when writing text.
+- I want modifiers and layer keys on thumbs, and they should stay in the same place as much as possible.
 
 Also, I prefer that each group of keys follows the traditional QWERTY layout, simply because it makes switching between keyboards less stressful.
-
-There are four keys for each thumb.  Each thumb key has a one-shot function and a held-down function, denoted as OneShot/HeldDown:
-
-| Left           | Right |
-| ----           | ----- |
-| Escape/Control | Delete/Control |
-| Space/NavMacro | Backspace/Shift |
-| Tab/SymNum     | Enter/Alt |
-| Shift/         | AltGr/ |
 
 ## V1
 
@@ -50,11 +41,21 @@ The raw layout of keys:
 
 ![V1 Layout](v1/minion.svg)
 
-The round outlined shapes are not actual keys, but OS-switch and debug buttons.  The middle ring is a track ball.  The outlined rectangular keys are optional.
+The middle ring is a track ball.  The outlined rectangular keys are optional.  The round outlined shapes (not shown) are not actual keys, but OS-switch and debug buttons.
+
+There are four keys for each thumb.  Each thumb key has a one-shot function and a held-down function, denoted as OneShot/HeldDown:
+
+| Left           | Right |
+| ----           | ----- |
+| Delete/Control | Escape/Control |
+| Backspace/Alt  | Space/Navigate |
+| Tab/GUI        | Enter/Symbols |
+| (1shot)AltGr   | (1shot)Shift |
 
 ![V1 keymap](v1/minion.pdf)
 
 ### Problems
 
-Sublime: C-A-P, C-Tab, S-Tab
-WM: A-Tab
+Sublime:
+WM: A-Tab, S-A-Tab
+Terminal:
