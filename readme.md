@@ -56,6 +56,6 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 
 ### Problems
 
-Sublime:
+Sublime: C-A-ping (update docstring)
 WM: A-Tab, S-A-Tab
 Terminal:
