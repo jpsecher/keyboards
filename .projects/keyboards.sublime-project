@@ -6,7 +6,8 @@
   ]
 , "folders":
   [ { "folder_exclude_patterns":
-      [ ".pytest_cache"
+      [ "*-backups"
+      , ".pytest_cache"
       , "qmk_firmware"
       , "venv"
       ]
