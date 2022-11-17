@@ -55,14 +55,14 @@
       "BL_TOGG",
       "KC_NO",
       "KC_NO",
-      "LCTL_T(KC_DEL)",
+      "LCTL_T(KC_ESC)",
       "LALT_T(KC_BSPC)",
-      "LGUI_T(KC_TAB)",
+      "LGUI_T(KC_DEL)",
       "OSM(MOD_RALT)",
       "OSM(MOD_LSFT)",
       "LT(2,KC_ENT)",
       "LT(1,KC_SPC)",
-      "LCTL_T(KC_ESC)"
+      "LCTL_T(KC_TAB)"
     ],
     [
       "KC_NO",
@@ -104,7 +104,7 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_ESC",
+      "KC_TAB",
       "KC_NO",
       "KC_NO",
       "KC_NO",

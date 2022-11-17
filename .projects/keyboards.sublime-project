@@ -12,7 +12,9 @@
       , "venv"
       ]
     , "file_exclude_patterns":
-      [ "*.zip"
+      [ "*.bak"
+      , "*.pdf"
+      , "*.zip"
       ]
     , "path": ".."
     }
