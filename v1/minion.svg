@@ -5,7 +5,7 @@
     <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
     <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
-    <rect x="0" y="135" width="40" height="40" rx="5" ry="5" stroke-dasharray="5,5"/>
+    <rect x="0" y="135" width="40" height="50" rx="5" ry="5" stroke-dasharray="5,5"/>
   </g>
   <g id="short-column" stroke="black" stroke-width="2" fill="white">
     <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
@@ -26,8 +26,8 @@
   </g>
   <g id="left-hand" stroke="black" stroke-width="2" fill="white">
     <use href="#tetris-column" transform="translate(40,9) rotate(-10)"/>
-    <use href="#short-column" transform="translate(105,-40)"/>
-    <use href="#long-column" transform="translate(150,-15)"/>
+    <use href="#short-column" transform="translate(91,-40) rotate(-5)"/>
+    <use href="#long-column" transform="translate(145,-15) rotate(-2)"/>
     <use href="#faketop-column" transform="translate(195,-45)"/>
     <use href="#faketop-column" transform="translate(240,-35)"/>
     <rect x="234" y="75" width="40" height="50" rx="5" ry="5" transform="rotate(15)"/>
@@ -40,7 +40,7 @@
 <circle cx="320" cy="225" r="18" stroke="black" stroke-width="2" fill="white"/>
 <use href="#left-hand" transform="translate(590,10) scale(-1,1) rotate(25)"/>
 <g font-size="9" fill="black">
-  <text x="166" y="133" transform="rotate(25)">1.00</text>
+  <text x="157" y="145" transform="rotate(20)">1.00</text>
   <text x="290" y="110" transform="rotate(40)">1.25</text>
   <text x="349" y="-7" transform="rotate(60)">1.50</text>
 </g>
