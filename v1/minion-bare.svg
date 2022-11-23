@@ -1,0 +1,41 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+  width="700" height="500">
+<defs>
+  <g id="long-column" stroke="black" stroke-width="2" fill="white">
+    <rect x="0" y="0" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="50" rx="5" ry="5"/>
+  </g>
+  <g id="short-column" stroke="black" stroke-width="2" fill="white">
+    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
+  </g>
+  <g id="faketop-column" stroke="black" stroke-width="2" fill="white">
+    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
+  </g>
+  <g id="tetris-column" stroke="black" stroke-width="2" fill="white">
+    <rect x="-45" y="60" width="40" height="40" rx="5" ry="5"/>
+    <rect x="-45" y="105" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="45" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="90" width="40" height="40" rx="5" ry="5"/>
+    <rect x="0" y="135" width="40" height="40" rx="5" ry="5"/>
+  </g>
+  <g id="left-hand" stroke="black" stroke-width="2" fill="white">
+    <use href="#tetris-column" transform="translate(40,9) rotate(-10)"/>
+    <use href="#short-column" transform="translate(91,-40) rotate(-5)"/>
+    <use href="#long-column" transform="translate(145,-15) rotate(-2)"/>
+    <use href="#faketop-column" transform="translate(195,-45)"/>
+    <use href="#faketop-column" transform="translate(240,-35)"/>
+    <rect x="234" y="75" width="40" height="50" rx="5" ry="5" transform="rotate(15)"/>
+    <rect x="300" y="-10" width="40" height="60" rx="5" ry="5" transform="rotate(30)"/>
+    <rect x="344" y="-100" width="40" height="60" rx="5" ry="5" transform="rotate(45)"/>
+    <rect x="363" y="-198" width="40" height="60" rx="5" ry="5" transform="rotate(60)"/>
+  </g>
+</defs>
+<use href="#left-hand" transform="translate(50,10) rotate(25)"/>
+<use href="#left-hand" transform="translate(590,10) scale(-1,1) rotate(25)"/>
+</svg>
