@@ -2,6 +2,8 @@
 //
 // A Mechanical Keyboard
 
+$fn = 128;
+
 height = 4;
 
 key_distance = 19;
@@ -64,15 +66,15 @@ module turn (degree) {
 }
 
 module index_finger () {
-  turn(23) three_keys();
+  turn(25) three_keys();
 }
 
 module middle_finger () {
-  turn(21) four_keys();
+  turn(23) four_keys();
 }
 
 module ring_finger () {
-  turn(18) three_keys();
+  turn(20) three_keys();
 }
 
 module pinkie () {
@@ -101,11 +103,22 @@ module right_hand () {
   thumbs();
 }
 
-// Plate 
-
-difference() {
-  linear_extrude(height)
-    square([140,160]);
-  right_hand();
+module plate () {
+  linear_extrude(height) {
+    minkowski() {
+      difference() {
+        union() {
+          translate([5,5,0]) square([120,105]);
+          translate([68.88,105]) circle(64);
+        }
+        translate([140,-13,0]) circle(90);
+      }
+      circle(5);
+    }
+  }
 }
 
+difference() {
+  plate();
+  right_hand();
+}
