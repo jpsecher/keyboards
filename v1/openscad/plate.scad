@@ -1,4 +1,4 @@
-// The Tree
+// The Pork Chop
 //
 // A Mechanical Keyboard
 
@@ -99,24 +99,24 @@ module pinkie_extra () {
 }
 
 module thumbs () {
-  translate([55,70]) turn(40) keyholder();
-  translate([41,57]) turn(55) keyholder();
-  translate([32,39]) turn(70) keyholder();
-  translate([27,19]) turn(85) keyholder();
+  translate([54,69]) turn(40) keyholder();
+  translate([38,56]) turn(55) keyholder();
+  translate([29,38]) turn(70) keyholder();
+  translate([24,18]) turn(85) keyholder();
 }
 
 module right_hand () {
   translate([33,79,0]) index_finger();
-  translate([48,90,0]) index_finger();
+  translate([49,90,0]) index_finger();
   // three only: translate([63,103,0]) middle_finger();
-  translate([71,82,0]) middle_finger();
-  translate([82,104,0]) ring_finger();
-  translate([104,94,0]) pinkie();
-  translate([118,109,0]) pinkie_extra();
+  translate([73,82,0]) middle_finger();
+  translate([84,104,0]) ring_finger();
+  translate([106,94,0]) pinkie();
+  translate([121,109,0]) pinkie_extra();
   thumbs();
 }
 
-module plate () {
+module plate_1 () {
   linear_extrude(height) {
     minkowski() {
       difference() {
@@ -124,14 +124,34 @@ module plate () {
           translate([5,5,0]) square([120,105]);
           translate([68.88,105]) circle(64);
         }
-        translate([140,-13,0]) circle(90);
+        translate([130,-13,0]) circle(93);
       }
       circle(5);
     }
   }
 }
 
-difference() {
-  plate();
-  right_hand();
+module right_side () {
+  difference() {
+    plate_1();
+    right_hand();
+  }
+}
+
+*right_side();
+
+module left_side () {
+  mirror([1,0,0]) right_side();
+}
+
+union() {
+  left_side();
+  linear_extrude(height) {
+    difference () {
+      translate([0,115,0]) square([15,40], center=true);
+      translate([0,137,0]) circle(7);
+    }
+    translate([-5,0,0]) square(10);
+  }
+  right_side();
 }
