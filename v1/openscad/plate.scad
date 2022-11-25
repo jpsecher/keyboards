@@ -19,16 +19,29 @@ module mirror2(vector) {
 }
 
 module keyholder () {
-  h = height+1;
+  margin = 0.5;
+  h = height+(2*margin);
   translate([0,0,-0.5]) {
     union() {
+      // hole
       linear_extrude(h) {
         square(key_hole, center=true);
       }
-      linear_extrude(h-0.5-key_tab_submersion) {
+      // botton indent
+      linear_extrude(h-margin-key_tab_submersion) {
         mirror2([0,1,0]) {
           translate([0,-(key_hole+key_tab_indent)/2,0]) {
             square([key_tab_width,key_tab_indent], center=true);
+          }
+        }
+      }
+      // top indent
+      translate([0,0,margin+key_tab_submersion]) {
+        linear_extrude(h-margin-key_tab_submersion) {
+          mirror2([1,0,0]) {
+            translate([-(key_hole+key_tab_indent)/2,0,0]) {
+              square([key_tab_indent,key_tab_width], center=true);
+            }
           }
         }
       }
