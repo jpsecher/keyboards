@@ -4,11 +4,12 @@
 
 $fn = 128;
 
-height = 4;
+height = 5;
+feet_height = 8;
 
 key_distance = 19;
 
-key_hole = 13.9;
+key_hole = 14;
 key_tab_indent = 0.5;
 key_tab_width = 5.0;
 key_tab_submersion = 1.3;
@@ -36,7 +37,7 @@ module keyholder () {
         }
       }
       // top indent
-      translate([0,0,margin+key_tab_submersion]) {
+      *translate([0,0,margin+key_tab_submersion]) {
         linear_extrude(h-margin-key_tab_submersion) {
           mirror2([1,0,0]) {
             translate([-(key_hole+key_tab_indent)/2,0,0]) {
@@ -116,35 +117,59 @@ module right_hand () {
   thumbs();
 }
 
-module plate_1 () {
-  linear_extrude(height) {
-    minkowski() {
-      difference() {
-        union() {
-          translate([5,5,0]) square([120,105]);
-          translate([68.88,105]) circle(64);
-        }
-        translate([130,-13,0]) circle(93);
+module plate_2d () {
+  minkowski() {
+    difference() {
+      union() {
+        translate([5,5,0]) square([120,105]);
+        translate([68.88,105]) circle(64);
       }
-      circle(5);
+      translate([130,-13,0]) circle(93);
     }
+    circle(5);
+  }
+}
+
+module rim_2d () {
+  difference() {
+    plate_2d();
+    offset(-5) plate_2d();
+  }
+}
+
+module rim_3d () {
+  translate([0,0,-feet_height]) {
+    linear_extrude(feet_height) {
+      rim_2d();
+    }
+  }
+}
+
+module plate_3d () {
+  linear_extrude(height) {
+    plate_2d();
   }
 }
 
 module right_side () {
   difference() {
-    plate_1();
+    union() {
+      plate_3d();
+      rim_3d();
+    }
     right_hand();
   }
 }
 
-*right_side();
+*plate_3d();
+*rim_3d();
+right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-union() {
+*union() {
   left_side();
   linear_extrude(height) {
     difference () {
@@ -154,4 +179,15 @@ union() {
     translate([-5,0,0]) square(10);
   }
   right_side();
+}
+
+module key_plate () {
+  linear_extrude(height) {
+    square([19,19], center=true);
+  }
+}
+
+*difference() {
+  key_plate();
+  keyholder();
 }
