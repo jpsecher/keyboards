@@ -67,13 +67,6 @@ module three_keys () {
     keyholder();
 }
 
-module four_keys () {
-  keyholder();
-  // Make room for a 1.5u key (ie, 1.25u extra space)
-  translate([0,(key_distance*1.25),0])
-    three_keys();
-}
-
 module turn (degree) {
   rotate([0,0,degree])
     children();
@@ -84,7 +77,7 @@ module index_finger () {
 }
 
 module middle_finger () {
-  turn(23) four_keys();
+  turn(23) three_keys();
 }
 
 module ring_finger () {
@@ -100,21 +93,22 @@ module pinkie_extra () {
 }
 
 module thumbs () {
-  translate([54,69]) turn(40) keyholder();
-  translate([38,56]) turn(55) keyholder();
-  translate([29,38]) turn(70) keyholder();
-  translate([24,18]) turn(85) keyholder();
+  translate([59,69]) turn(38) keyholder();
+  translate([42,54]) turn(55) keyholder();
+  translate([30,33]) turn(70) keyholder();
+  translate([26,8]) turn(85) keyholder();
 }
 
 module right_hand () {
-  translate([33,79,0]) index_finger();
-  translate([49,90,0]) index_finger();
-  // three only: translate([63,103,0]) middle_finger();
-  translate([73,82,0]) middle_finger();
-  translate([84,104,0]) ring_finger();
-  translate([106,94,0]) pinkie();
-  translate([121,109,0]) pinkie_extra();
-  thumbs();
+  translate([1,7,0]) {
+    translate([33,79,0]) index_finger();
+    translate([49,90,0]) index_finger();
+    translate([64,104,0]) middle_finger();
+    translate([84,104,0]) ring_finger();
+    translate([107,94,0]) pinkie();
+    translate([123,109,0]) pinkie_extra();
+    thumbs();
+  }
 }
 
 module plate_2d () {
@@ -122,9 +116,9 @@ module plate_2d () {
     difference() {
       union() {
         translate([5,5,0]) square([120,105]);
-        translate([68.88,105]) circle(64);
+        translate([72,107]) circle(67);
       }
-      translate([130,-13,0]) circle(93);
+      translate([140,0,0]) circle(90);
     }
     circle(5);
   }
