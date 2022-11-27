@@ -100,16 +100,14 @@ module thumbs () {
 }
 
 module right_hand () {
-  translate([1,7,0]) {
-    translate([33,79,0]) index_finger();
-    translate([49,90,0]) index_finger();
-    translate([64,104,0]) middle_finger();
-    translate([84,104,0]) ring_finger();
-    translate([107,94,0]) pinkie();
-    translate([123,109,0]) pinkie_extra();
-    thumbs();
-  }
-}
+  translate([33,79,0]) index_finger();
+  translate([49,90,0]) index_finger();
+  translate([64,104,0]) middle_finger();
+  translate([84,104,0]) ring_finger();
+  translate([107,94,0]) pinkie();
+  translate([123,109,0]) pinkie_extra();
+  thumbs();
+ }
 
 module plate_2d () {
   minkowski() {
@@ -124,48 +122,47 @@ module plate_2d () {
   }
 }
 
-module rim_2d () {
-  difference() {
-    plate_2d();
-    offset(-5) plate_2d();
-  }
+module interior_2d () {
+  offset(-5) plate_2d();
 }
 
-module rim_3d () {
-  translate([0,0,-feet_height]) {
-    linear_extrude(feet_height) {
-      rim_2d();
+module interior_3d () {
+  translate([0,0,-0.5]) {
+    linear_extrude(feet_height+0.5) {
+      interior_2d();
     }
   }
 }
 
 module plate_3d () {
-  linear_extrude(height) {
-    plate_2d();
+  difference() {
+    linear_extrude(height+feet_height) {
+      plate_2d();
+    }
+    interior_3d();
   }
 }
 
 module right_side () {
   difference() {
-    union() {
-      plate_3d();
-      rim_3d();
-    }
-    right_hand();
+    plate_3d();
+    translate([2,7,feet_height]) right_hand();
   }
 }
 
 *plate_3d();
-*rim_3d();
-right_side();
+*interior_3d();
+*right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
+left_side();
+
 *union() {
   left_side();
-  linear_extrude(height) {
+  linear_extrude(height+feet_height) {
     difference () {
       translate([0,115,0]) square([15,40], center=true);
       translate([0,137,0]) circle(7);
