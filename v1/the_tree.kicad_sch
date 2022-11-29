@@ -4646,7 +4646,7 @@
     (in_bom yes) (on_board yes)
     (uuid 22c6e9fd-8440-4742-b3a7-0af3a4452d93)
     (property "Reference" "R1" (id 0) (at 139.065 151.13 90))
-    (property "Value" "10k" (id 1) (at 139.065 153.67 90))
+    (property "Value" "1M" (id 1) (at 139.065 153.67 90))
     (property "Footprint" "" (id 2) (at 139.065 155.448 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -6856,7 +6856,7 @@
       (reference "J2") (unit 1) (value "AVR-ISP-6") (footprint "")
     )
     (path "/22c6e9fd-8440-4742-b3a7-0af3a4452d93"
-      (reference "R1") (unit 1) (value "10k") (footprint "")
+      (reference "R1") (unit 1) (value "1M") (footprint "")
     )
     (path "/dccaf421-4b06-4a6c-9285-c0b383a533f7"
       (reference "R2") (unit 1) (value "22") (footprint "")

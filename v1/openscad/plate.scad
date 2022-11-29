@@ -76,6 +76,10 @@ module index_finger () {
   turn(25) three_keys();
 }
 
+module index_finger_extra () {
+  turn(25) two_keys();
+}
+
 module middle_finger () {
   turn(23) three_keys();
 }
@@ -94,20 +98,20 @@ module pinkie_extra () {
 
 module thumbs () {
   translate([59,69]) turn(38) keyholder();
-  translate([42,54]) turn(55) keyholder();
+  translate([41,55]) turn(55) keyholder();
   translate([30,33]) turn(70) keyholder();
   translate([26,8]) turn(85) keyholder();
 }
 
 module right_hand () {
-  translate([33,79,0]) index_finger();
+  translate([28,89,0]) index_finger_extra();
   translate([49,90,0]) index_finger();
   translate([64,104,0]) middle_finger();
   translate([84,104,0]) ring_finger();
   translate([107,94,0]) pinkie();
   translate([123,109,0]) pinkie_extra();
   thumbs();
- }
+}
 
 module plate_2d () {
   minkowski() {
@@ -146,19 +150,19 @@ module plate_3d () {
 module right_side () {
   difference() {
     plate_3d();
-    translate([2,7,feet_height]) right_hand();
+    translate([0,7,feet_height]) right_hand();
   }
 }
 
 *plate_3d();
 *interior_3d();
-*right_side();
+right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-left_side();
+*left_side();
 
 *union() {
   left_side();
