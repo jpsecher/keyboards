@@ -154,35 +154,43 @@ module right_side () {
   }
 }
 
-*plate_3d();
-*interior_3d();
-right_side();
+*right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-*left_side();
+left_side();
 
-*union() {
-  left_side();
-  linear_extrude(height+feet_height) {
+module complete_2d () {
+  mirror2([1,0,0]) plate_2d();
     difference () {
       translate([0,115,0]) square([15,40], center=true);
       translate([0,137,0]) circle(7);
     }
     translate([-5,0,0]) square(10);
-  }
-  right_side();
 }
 
-module key_plate () {
-  linear_extrude(height) {
-    square([19,19], center=true);
+module complete_interior_3d () {
+  translate([0,0,-0.5]) {
+    linear_extrude(feet_height+0.5) {
+      offset(-5) complete_2d();
+    }
   }
 }
 
-*difference() {
-  key_plate();
-  keyholder();
+module complete_plate_3d () {
+  difference() {
+    linear_extrude(height+feet_height) {
+      complete_2d();
+    }
+    complete_interior_3d();
+  }
 }
+
+*difference () {
+  complete_plate_3d();
+  mirror2([1,0,0]) translate([-1,8,feet_height]) right_hand();
+}
+
+
