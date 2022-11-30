@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "pork-chop-control")(type "KiCad")(uri "${KIPRJMOD}/pork-chop-control.kicad_sym")(options "")(descr ""))
+)
