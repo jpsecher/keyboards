@@ -97,6 +97,7 @@ module pinkie_extra () {
 }
 
 module thumbs () {
+  translate([78,80]) turn(23) keyholder();
   translate([59,69]) turn(38) keyholder();
   translate([41,55]) turn(55) keyholder();
   translate([30,33]) turn(70) keyholder();
