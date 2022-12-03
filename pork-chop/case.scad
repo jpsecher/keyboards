@@ -155,13 +155,13 @@ module right_side () {
   }
 }
 
-*right_side();
+right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-left_side();
+*left_side();
 
 module complete_2d () {
   mirror2([1,0,0]) plate_2d();
