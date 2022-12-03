@@ -139,12 +139,21 @@ module interior_3d () {
   }
 }
 
+module flat_cable_3d () {
+  translate([35,160,-1]) {
+    linear_extrude(4) {
+      turn(30) square([15,15]);
+    }
+  }
+}
+
 module plate_3d () {
   difference() {
     linear_extrude(height+feet_height) {
       plate_2d();
     }
     interior_3d();
+    flat_cable_3d();
   }
 }
 
@@ -155,13 +164,13 @@ module right_side () {
   }
 }
 
-right_side();
+*right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-*left_side();
+left_side();
 
 module complete_2d () {
   mirror2([1,0,0]) plate_2d();
