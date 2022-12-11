@@ -41,14 +41,14 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "LGUI_T(KC_ESC)",
-      "LALT_T(KC_BSPC)",
-      "LCTL_T(KC_DEL)",
       "OSM(MOD_LSFT)",
-      "OSM(MOD_RALT)",
+      "LGUI_T(KC_BSPC)",
+      "LALT_T(KC_DEL)",
+      "LCTL_T(KC_ESC)",
       "LCTL_T(KC_ENT)",
+      "LT(2,KC_TAB)",
       "LT(1,KC_SPC)",
-      "LT(2,KC_TAB)"
+      "OSM(MOD_RALT)"
     ],
     [
       "KC_F1",
@@ -129,14 +129,14 @@
       "KC_P2",
       "KC_P3",
       "KC_PEQL",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
       "OSM(MOD_RALT)",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
       "KC_NO",
+      "KC_TRNS",
       "KC_NO",
-      "KC_NO",
-      "KC_TRNS"
+      "KC_NO"
     ]
   ],
   "author": "jpsecher"
