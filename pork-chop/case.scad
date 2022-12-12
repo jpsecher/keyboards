@@ -107,7 +107,7 @@ module thumbs () {
 module right_hand () {
   translate([28,89,0]) index_finger_extra();
   translate([49,90,0]) index_finger();
-  translate([64,104,0]) middle_finger();
+  translate([63.5,104,0]) middle_finger();
   translate([84,104,0]) ring_finger();
   translate([107,94,0]) pinkie();
   translate([123,109,0]) pinkie_extra();
