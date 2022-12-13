@@ -56,6 +56,8 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 
 ### Problems
 
-- Sublime: C-A-ping (update docstring)
+- General: dash cumbersome
+- Sublime: C-A-ping (update docstring), A-BS (delete word)
 - WM: (none)
 - Terminal: (none)
+- 
