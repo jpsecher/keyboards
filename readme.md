@@ -1,4 +1,4 @@
-# Custom Keyboard
+lkdsjfl;k dsj flkjsdl# Custom Keyboard
 
 Goals
 - Good ergonomics
@@ -56,8 +56,9 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 
 ### Problems
 
-- General: dash cumbersome
-- Sublime: C-A-ping (update docstring), A-BS (delete word)
+- General: dash cumbersome, swap gui/ctl stochasticly -> needs real switch
+- Sublime: C-A-ping (update docstring), A-BS (delete word), S-G-z (macOS redo)
 - WM: (none)
 - Terminal: (none)
-- 
+
+sdfsdjlkjsil;

@@ -4,7 +4,7 @@
 
 $fn = 128;
 
-height = 5;
+height = 4.6;
 feet_height = 8;
 
 key_distance = 19;
@@ -97,11 +97,16 @@ module pinkie_extra () {
 }
 
 module thumbs () {
-  translate([78,80]) turn(23) keyholder();
-  translate([59,69]) turn(38) keyholder();
-  translate([41,55]) turn(55) keyholder();
-  translate([30,33]) turn(70) keyholder();
-  translate([26,8]) turn(85) keyholder();
+  *translate([78,80]) turn(23) keyholder();
+  *translate([59,69]) turn(38) keyholder();
+  *translate([41,55]) turn(55) keyholder();
+  *translate([30,33]) turn(70) keyholder();
+  *translate([26,8]) turn(85) keyholder();
+  translate([84,79]) turn(16) keyholder();
+  translate([58.5,69]) turn(25) keyholder();
+  translate([38,58]) turn(45) keyholder();
+  translate([25,38]) turn(61) keyholder();
+  translate([18,15]) turn(77) keyholder();
 }
 
 module right_hand () {
@@ -118,10 +123,10 @@ module plate_2d () {
   minkowski() {
     difference() {
       union() {
-        translate([5,5,0]) square([120,105]);
-        translate([72,107]) circle(67);
+        translate([5,5,0]) square([130,105]);
+        translate([77,105]) circle(70);
       }
-      translate([140,0,0]) circle(90);
+      translate([126,-10,0]) circle(88);
     }
     circle(5);
   }
@@ -140,9 +145,9 @@ module interior_3d () {
 }
 
 module flat_cable_3d () {
-  translate([35,160,-1]) {
-    linear_extrude(4) {
-      turn(30) square([15,15]);
+  translate([65,170,-1]) {
+    linear_extrude(6) {
+      turn(0) square([15,15]);
     }
   }
 }
@@ -160,7 +165,7 @@ module plate_3d () {
 module right_side () {
   difference() {
     plate_3d();
-    translate([0,7,feet_height]) right_hand();
+    translate([5,7,feet_height]) right_hand();
   }
 }
 
@@ -170,16 +175,18 @@ module left_side () {
   mirror([1,0,0]) right_side();
 }
 
-left_side();
+*left_side();
 
 module complete_2d () {
   mirror2([1,0,0]) plate_2d();
-    difference () {
-      translate([0,115,0]) square([15,40], center=true);
-      translate([0,137,0]) circle(7);
-    }
-    translate([-5,0,0]) square(10);
+  difference () {
+    translate([0,125,0]) square([35,40], center=true);
+    translate([0,155,0]) square([50,20], center=true);
+  }
+  translate([-5,0,0]) square(10);
 }
+
+*complete_2d();
 
 module complete_interior_3d () {
   translate([0,0,-0.5]) {
@@ -198,9 +205,9 @@ module complete_plate_3d () {
   }
 }
 
-*difference () {
+difference () {
   complete_plate_3d();
-  mirror2([1,0,0]) translate([-1,8,feet_height]) right_hand();
+  mirror2([1,0,0]) translate([4,8,feet_height]) right_hand();
 }
 
 
