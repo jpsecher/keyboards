@@ -187,8 +187,6 @@ module complete_2d () {
   translate([-5,0,0]) square(10);
 }
 
-*complete_2d();
-
 module complete_interior_3d () {
   translate([0,0,-0.5]) {
     linear_extrude(feet_height+0.5) {
@@ -206,9 +204,13 @@ module complete_plate_3d () {
   }
 }
 
-difference () {
-  complete_plate_3d();
-  mirror2([1,0,0]) translate([4,8,feet_height]) right_hand();
+module keyboard () {
+  difference () {
+    complete_plate_3d();
+    mirror2([1,0,0]) translate([4,8,feet_height]) right_hand();
+  }
 }
 
+*keyboard();
 
+projection() keyboard();
