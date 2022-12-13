@@ -50,31 +50,16 @@ module keyholder () {
   }
 }
 
-module key_1u () {
+module key (units) {
   union() {
-    translate([0,0,height-1]) {
+    *translate([0,0,height-1]) {
       linear_extrude(2) {
-        square(key_distance-1, center=true);
+        square([key_distance-1,key_distance*units-1], center=true);
       }
     }
     keyholder();
   }
 }
-
-*key_1u();
-
-module key_1_5u () {
-  union() {
-    translate([0,0,height-1]) {
-      linear_extrude(2) {
-        square([key_distance-1,key_distance*1.5-1], center=true);
-      }
-    }
-    keyholder();
-  }
-}
-
-*key_1_5u();
 
 module array (count, distance) {
   for (i=[0:1:count-1]) {
@@ -85,12 +70,12 @@ module array (count, distance) {
 
 module two_keys () {
   array(2, key_distance)
-    key_1u();
+    key(1);
 }
 
 module three_keys () {
   array(3, key_distance)
-    key_1u();
+    key(1);
 }
 
 module five_keys () {
@@ -120,11 +105,11 @@ module pinkie_full () {
 }
 
 module thumbs () {
-  translate([85,82]) turn(20) key_1u();
-  translate([59,69]) turn(25) key_1u();
-  translate([38,60]) turn(45) key_1_5u();
-  translate([25,42]) turn(61) key_1_5u();
-  translate([17,21]) turn(77) key_1_5u();
+  translate([85,82]) turn(20) key(1);
+  translate([59,69]) turn(25) key(1);
+  translate([38,60]) turn(45) key(1.5);
+  translate([25,42]) turn(61) key(1.5);
+  translate([17,21]) turn(77) key(1.5);
 }
 
 module right_hand () {
@@ -185,7 +170,7 @@ module right_side () {
   }
 }
 
-right_side();
+*right_side();
 
 module left_side () {
   mirror([1,0,0]) right_side();
@@ -221,7 +206,7 @@ module complete_plate_3d () {
   }
 }
 
-*difference () {
+difference () {
   complete_plate_3d();
   mirror2([1,0,0]) translate([4,8,feet_height]) right_hand();
 }
