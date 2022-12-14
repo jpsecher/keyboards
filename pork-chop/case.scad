@@ -211,6 +211,6 @@ module keyboard () {
   }
 }
 
-*keyboard();
+keyboard();
 
-projection() keyboard();
+*projection() keyboard();

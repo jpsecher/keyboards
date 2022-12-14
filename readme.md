@@ -1,4 +1,4 @@
-lkdsjfl;k dsj flkjsdl# Custom Keyboard
+# Custom Keyboard
 
 Goals
 - Good ergonomics
@@ -61,4 +61,3 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 - WM: (none)
 - Terminal: (none)
 
-sdfsdjlkjsil;
