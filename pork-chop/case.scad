@@ -6,6 +6,7 @@ $fn = 128;
 
 height = 4.6;
 feet_height = 8;
+wall = 5;
 
 key_distance = 19;
 
@@ -52,7 +53,7 @@ module keyholder () {
 
 module key (units) {
   union() {
-    *translate([0,0,height-1]) {
+    translate([0,0,height-1]) {
       linear_extrude(2) {
         square([key_distance*units-1,key_distance-1], center=true);
       }
@@ -135,7 +136,7 @@ module plate_2d () {
 }
 
 module interior_2d () {
-  offset(-5) plate_2d();
+  offset(-wall) plate_2d();
 }
 
 module interior_3d () {
@@ -212,6 +213,20 @@ module keyboard () {
   }
 }
 
-keyboard();
+*keyboard();
 
+// top plate
 *projection() keyboard();
+
+module pcb () {
+  linear_extrude(1)
+    offset(-wall-1) complete_2d();
+}
+
+// pcb key guide
+*projection() difference() {
+  pcb();
+  mirror2([1,0,0]) translate([3,-3,-key_tab_submersion/2]) right_hand();
+}
+
+projection() pcb();
