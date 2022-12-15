@@ -54,7 +54,7 @@ module key (units) {
   union() {
     *translate([0,0,height-1]) {
       linear_extrude(2) {
-        square([key_distance-1,key_distance*units-1], center=true);
+        square([key_distance*units-1,key_distance-1], center=true);
       }
     }
     keyholder();
@@ -107,9 +107,9 @@ module pinkie_full () {
 module thumbs () {
   translate([85,82]) turn(20) key(1);
   translate([59,69]) turn(25) key(1);
-  translate([38,60]) turn(45) key(1.5);
-  translate([25,42]) turn(61) key(1.5);
-  translate([17,21]) turn(77) key(1.5);
+  translate([38,60]) turn(-45) key(1.5);
+  translate([27,41]) turn(-29) key(1.25);
+  translate([19,21]) turn(-13) key(1.25);
 }
 
 module right_hand () {
@@ -124,10 +124,11 @@ module plate_2d () {
   minkowski() {
     difference() {
       union() {
-        translate([5,5,0]) square([130,105]);
-        translate([77,107]) circle(72);
+        translate([5,5,0]) square([110,98]);
+        translate([72.9,100]) circle(68);
       }
-      translate([126,-10,0]) circle(88);
+      translate([113,-13,0]) circle(80);
+      *translate([103,7,0]) turn(10) square(60);
     }
     circle(5);
   }
@@ -166,7 +167,7 @@ module plate_3d () {
 module right_side () {
   difference() {
     plate_3d();
-    translate([5,7,feet_height]) right_hand();
+    translate([3,-3,feet_height]) right_hand();
   }
 }
 
@@ -181,7 +182,7 @@ module left_side () {
 module complete_2d () {
   mirror2([1,0,0]) plate_2d();
   difference () {
-    translate([0,125,0]) square([35,40], center=true);
+    translate([0,125,0]) square([35,50], center=true);
     translate([0,155,0]) square([50,20], center=true);
   }
   translate([-5,0,0]) square(10);
@@ -207,7 +208,7 @@ module complete_plate_3d () {
 module keyboard () {
   difference () {
     complete_plate_3d();
-    mirror2([1,0,0]) translate([4,8,feet_height]) right_hand();
+    mirror2([1,0,0]) translate([3,-3,feet_height]) right_hand();
   }
 }
 
