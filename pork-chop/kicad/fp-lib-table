@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "mech-kbd")(type "KiCad")(uri "${KIPRJMOD}/mech-kbd.pretty")(options "")(descr ""))
-)

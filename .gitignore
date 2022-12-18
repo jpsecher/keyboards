@@ -1,3 +1,6 @@
+*-backups/
+*-bak
 *.bak
 *.gbrjob
 *.zip
+venv/

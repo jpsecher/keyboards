@@ -1,4 +1,4 @@
-20323222450754462
+20324893847221801
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -85749,6 +85749,13 @@ MX-Hotswap-1U
 0
 2
 2
+mech-kbd
+USB4500030A
+USB4500-03-0-A-2
+Connector
+0
+16
+16
 mech-kbd
 Wuerth_7498011211
 RJ45 ethernet transformer with magnetics (https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/JXD6-0001NL/doc_part/JXD6-0001NL.pdf)

@@ -48,13 +48,7 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -118,15 +112,8 @@
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [
-        0.0
-      ],
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "track_widths": [],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -346,7 +333,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pork-chop.kicad_pro",
+    "filename": "keyholder.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -425,7 +412,7 @@
   },
   "sheets": [
     [
-      "c5eaf993-5ca3-41a9-9f58-50b86c0038a2",
+      "55b24241-9864-4be1-8471-a0bac88013f7",
       ""
     ]
   ],
