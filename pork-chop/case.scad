@@ -99,11 +99,11 @@ module pinkie_full () {
 }
 
 module thumbs () {
-  translate([84,78]) turn(15) key(1);
+  translate([86,77]) turn(9) key(1);
   translate([59,69]) turn(25) key(1);
   translate([38,60]) turn(-45) key(1.5);
-  translate([27,41]) turn(-29) key(1.25);
-  translate([19,21]) turn(-13) key(1.25);
+  translate([25,45]) turn(-38) key(1.25);
+  translate([14,28]) turn(-29) key(1);
 }
 
 module right_hand () {
@@ -123,8 +123,9 @@ module plate_2d () {
         translate([10,5,0]) square([100,90]);
         translate([74,101]) circle(64);
       }
-      translate([113,-9,0]) circle(75);
-      *translate([103,7,0]) turn(10) square(60);
+      translate([106,-18,0]) circle(80);
+      //translate([145,50,0]) circle(40);
+      //translate([145,-34,0]) turn(40) square(100);
     }
     circle(5);
   }
@@ -186,14 +187,16 @@ module complete_2d () {
 
 module standoff () {
   linear_extrude(pcb_height) circle(mountin_hole / 2);
-  translate([0,0,pcb_height]) linear_extrude(membrane) circle(mountin_hole / 2 + 1);  
+  translate([0,0,pcb_height]) {
+    linear_extrude(membrane) circle(mountin_hole / 2 + 1);
+  }
 }
 
 *standoff();
 
 module standoffs () {
   mirror2([1,0,0]) {
-    translate([34,12,0]) standoff();
+    translate([22,12,0]) standoff();
     translate([96,89,0]) standoff();
     translate([113,135,0]) standoff();
     translate([36,137,0]) standoff();
@@ -224,7 +227,9 @@ module complete_plate_3d () {
 module keyboard () {
   difference () {
     complete_plate_3d();
-    mirror2([1,0,0]) translate([3,-3,feet_height]) right_hand();
+    mirror2([1,0,0]) {
+      translate([3,-3,feet_height]) right_hand();
+    }
   }
 }
 
@@ -242,12 +247,18 @@ module pcb () {
   }
 }
 
-#translate([0,0,feet_height - pcb_height]) pcb();
+*translate([0,0,feet_height - pcb_height]) pcb();
 
 // pcb key guide
 *projection() difference() {
   pcb();
-  mirror2([1,0,0]) translate([3,-3,-key_tab_submersion/2]) right_hand();
+  mirror2([1,0,0]) {
+    translate([3,-3,-key_tab_submersion/2]) right_hand();
+  }
 }
 
-*projection() pcb();
+*projection() {
+  linear_extrude(pcb_height) {
+    offset(-wall-1) complete_2d();
+  }
+}
