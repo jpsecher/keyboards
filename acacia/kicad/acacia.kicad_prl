@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 31,
+    "active_layer": 37,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_nets": [],
@@ -62,8 +62,8 @@
       35,
       36
     ],
-    "visible_layers": "ffcd0dc_ffffffff",
-    "zone_display_mode": 1
+    "visible_layers": "803d0f0_ffffffff",
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "acacia.kicad_prl",
