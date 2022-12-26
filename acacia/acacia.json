@@ -42,12 +42,12 @@
       "KC_DOT",
       "KC_QUOT",
       "OSM(MOD_LSFT)",
-      "LT(2,KC_DEL)",
+      "LT(2,KC_BSPC)",
       "LCTL_T(KC_ESC)",
       "OSM(MOD_LALT)",
       "OSM(MOD_LALT)",
       "LGUI_T(KC_SPC)",
-      "LT(1,KC_BSPC)",
+      "LT(1,KC_DEL)",
       "OSM(MOD_RALT)"
     ],
     [

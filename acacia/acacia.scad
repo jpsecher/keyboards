@@ -4,12 +4,12 @@
 
 $fn = 128;
 
-height = 4.6;
+height = 4.5;
 feet_height = 8;
 wall = 5;
 pcb_height = 1.2;
 mountin_hole = 3;
-membrane = 2;
+membrane = 1;
 
 key_distance = 19;
 
@@ -46,7 +46,7 @@ module keyholder () {
 
 module key (units) {
   union() {
-    translate([0,0,height-1]) {
+    *translate([0,0,height-1]) {
       linear_extrude(2) {
         square([key_distance*units-1,key_distance-1],  center=true);
       }
@@ -186,36 +186,49 @@ module complete_2d () {
 }
 
 module standoff () {
-  linear_extrude(pcb_height) circle(mountin_hole / 2);
-  translate([0,0,pcb_height]) {
-    linear_extrude(membrane) circle(mountin_hole / 2 + 1);
+  difference() {
+    translate([0,0,pcb_height]) {
+      linear_extrude(membrane) circle(mountin_hole / 2 + 1);
+    }
+    translate([0,0,-1]) {
+      linear_extrude(pcb_height + membrane + 2) 
+        circle(mountin_hole / 2 - 0.1);
+    }
   }
 }
 
 *standoff();
 
-module standoffs () {
+module standoffs_placement () {
   mirror2([1,0,0]) {
-    translate([22,12,0]) standoff();
-    translate([96,89,0]) standoff();
-    translate([113,135,0]) standoff();
-    translate([36,137,0]) standoff();
-    translate([38,74,0]) standoff();
+    translate([22,12,0]) children();
+    translate([96,89,0]) children();
+    translate([113,135,0]) children();
+    translate([36,137,0]) children();
+    translate([38,74,0]) children();
   }
 }
+
+module standoffs () {
+  standoffs_placement() {
+    standoff();
+  }
+}
+
+*standoffs();
 
 module complete_interior_3d () {
   translate([0,0,-0.5]) {
     difference() {
-      linear_extrude(feet_height+0.5) {
-        offset(-5) complete_2d();
+      linear_extrude(feet_height+0.5+membrane) {
+        offset(-wall) complete_2d();
       }
       translate([0,0,feet_height-0.5]) standoffs();
     }
   }
 }
 
-module complete_plate_3d () {
+module complete_keyboard_3d () {
   difference() {
     linear_extrude(height+feet_height) {
       complete_2d();
@@ -226,14 +239,41 @@ module complete_plate_3d () {
 
 module keyboard () {
   difference () {
-    complete_plate_3d();
+    complete_keyboard_3d();
     mirror2([1,0,0]) {
       translate([3,-3,feet_height]) right_hand();
     }
   }
 }
 
-keyboard();
+*keyboard();
+
+module holes () {
+  standoffs_placement() {
+    translate([0,0,-1]) {
+      linear_extrude(height + membrane - 1) 
+        circle(mountin_hole / 2 - 0.1);
+    }    
+  }
+}
+
+module plate () {
+  difference() {
+    union() {
+      translate([0,0,membrane])
+        linear_extrude(height-membrane) {
+          complete_2d();
+        }  
+      translate([0,0,-membrane]) standoffs();
+    }
+    holes();
+    mirror2([1,0,0]) {
+      translate([3,-3,0]) right_hand();
+    }
+  }
+}
+
+plate()
 
 // top plate
 *projection() keyboard();
