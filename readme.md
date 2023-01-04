@@ -57,7 +57,7 @@ There are four keys for each thumb.  Each thumb key has a one-shot function and 
 ### Problems
 
 - General: dash cumbersome, swap gui/ctl stochasticly -> needs real switch
-- Sublime: C-A-ping (update docstring), A-BS (delete word), S-G-z (macOS redo)
+- Sublime: C-A-up (switch header), C-A-ping (update docstring), A-BS (delete word), S-G-z (macOS redo), W-ping (console), C-/ (comment selection)
 - WM: (none)
 - Terminal: (none)
 

@@ -41,14 +41,14 @@
       "KC_COMM",
       "KC_DOT",
       "KC_QUOT",
-      "OSM(MOD_LSFT)",
+      "OSM(MOD_LALT)",
       "LT(2,KC_BSPC)",
       "LCTL_T(KC_ESC)",
-      "OSM(MOD_LALT)",
-      "OSM(MOD_LALT)",
+      "OSM(MOD_LSFT)",
+      "OSM(MOD_RALT)",
       "LGUI_T(KC_SPC)",
       "LT(1,KC_DEL)",
-      "OSM(MOD_RALT)"
+      "OSM(MOD_LALT)"
     ],
     [
       "KC_F1",
@@ -86,7 +86,7 @@
       "KC_END",
       "KC_PGDN",
       "KC_TRNS",
-      "LGUI_T(KC_DEL)",
+      "LGUI_T(KC_BSPC)",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -135,7 +135,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "LCTL_T(KC_BSPC)",
+      "LCTL_T(KC_DEL)",
       "KC_TRNS"
     ]
   ],
