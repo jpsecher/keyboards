@@ -15,5 +15,6 @@ I seem to have settled on a [Minimak-4](http://www.minimak.org/) layout for the 
 ## Improvements
 
 - Adjust the thumb keys slightly to make sure the keycaps to not collide.  Also, the home thumb key could be a little less tilted.
+- Align Q and P keys with ring finger use (instead of pinkie use).
 - Include a trackball (as alluded to in the pictures).  Unfortunately the ATmega32U2 used in the build does not have built-in I2C communication, so unless the controller is upgraded to eg. ATmega32U4, the communication has to be done brute-force through some of the five unused GPIO pins.
 - Make a proper (wooden) case.
