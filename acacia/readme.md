@@ -8,7 +8,9 @@ A custom built mechanical keyboard with just 38 keys plus two extra media keys.
 
 The [layout](acacia.pdf) uses three layers.  One for alphas, one for navigation/function keys, and one for symbols/numpad.
 
-The thumb home keys double as layer switches and backspace/space.  The lower thumb keys are one-shot shift keys.
+The thumb home keys double as layer switches and tab/space.  The lower thumb keys are one-shot shift keys.
+
+The Escape key is a [Layer Lock](https://getreuer.info/posts/keyboards/layer-lock) on both upper layers, which eliminates the strain of holding down the thumb for prolonged navigation and number punching.  And it makes it possible to move one hand to a trackball while using the other hand for mouse buttons.
 
 The lower home row (Z, X, C, V) doubles as modifiers (AltGr, GUI, Alt, Control), and these functions are mirrored on the other hand (M, comma, period, quote).  This mirroring of modifiers is carried through on both other layers.
 
