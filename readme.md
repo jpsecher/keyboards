@@ -37,4 +37,4 @@ Also, I prefer that each group of keys follow the traditional QWERTY layout, sim
 
 ## Keyboards in this repository
 
-- [Acacia](acacia/): a pseudo-split 42 key column-staggered keyboard
+- [Acacia](acacia/): a pseudo-split 40 key column-staggered keyboard

@@ -25,3 +25,5 @@ As seen on the picture, the current layout for the alphas is [Minimak-6](http://
 - Align Q and P keys with ring finger use (instead of pinky use), or simply tilt the pinky columns the same as the ring finger column.
 - Include a trackball (as alluded to in the pictures).  Unfortunately the ATmega32U2 used in the build does not have built-in I2C communication, so unless the controller is upgraded to eg. ATmega32U4, the communication has to be done brute-force through some of the five unused GPIO pins.
 - Make a proper (wooden?) case.
+- Shielding for the PCB.
+- Layer status output, eg. through LEDs.
