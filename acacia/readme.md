@@ -27,3 +27,8 @@ As seen on the picture, the current layout for the alphas is [Minimak-6](http://
 - Make a proper (wooden?) case.
 - Shielding for the PCB.
 - Layer status output, eg. through LEDs.
+
+## Alternatives
+
+- After finishing the prototypes, I discovered this repo: https://github.com/AlaaSaadAbdo/battoota/
+
