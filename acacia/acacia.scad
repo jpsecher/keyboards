@@ -4,7 +4,7 @@
 
 $fn = 128;
 
-height = 4.5;
+height = 4.6;
 feet_height = 8;
 wall = 5;
 pcb_height = 1.2;
@@ -103,7 +103,7 @@ module thumbs () {
   translate([59,69]) turn(25) key(1);
   translate([38,60]) turn(-45) key(1.5);
   translate([25,45]) turn(-38) key(1.25);
-  translate([14,28]) turn(-29) key(1);
+  *translate([14,28]) turn(-29) key(1);
 }
 
 module right_hand () {
@@ -120,7 +120,7 @@ module plate_2d () {
       union() {
         //translate([5,5,0]) square([110,98]);
         //translate([72.9,100]) circle(68);
-        translate([10,5,0]) square([100,90]);
+        translate([10,25,0]) square([100,70]);
         translate([74,101]) circle(64);
       }
       translate([106,-18,0]) circle(80);
@@ -179,10 +179,10 @@ module left_side () {
 module complete_2d () {
   mirror2([1,0,0]) plate_2d();
   difference () {
-    translate([0,80,0]) square([35,150], center=true);
+    translate([0,88,0]) square([35,135], center=true);
     translate([0,150,0]) square([50,20], center=true);
   }
-  translate([-10,0,0]) square(20);
+  translate([-10,20,0]) square(20);
 }
 
 module standoff () {
@@ -201,7 +201,7 @@ module standoff () {
 
 module standoffs_placement () {
   mirror2([1,0,0]) {
-    translate([22,12,0]) children();
+    translate([16,31,0]) children();
     translate([96,89,0]) children();
     translate([113,135,0]) children();
     translate([36,137,0]) children();
