@@ -99,12 +99,11 @@ module ring_finger () {
   turn(15) three_keys();
 }
 
-module pinkie_full () {
+module pinky_full () {
   turn(15) four_keys();
 }
 
 module thumbs () {
-  *translate([73.5,74]) turn(-75) key(1);
   translate([71.7,80]) turn(-75) key(1.5);
   translate([50,68]) turn(15) key(1);
   translate([31.5,63]) turn(-75) key(1.5);
@@ -115,7 +114,7 @@ module right_hand () {
   translate([49,89,0]) index_finger_full();
   translate([65.5,103,0]) middle_finger();
   translate([86.5,99,0]) ring_finger();
-  translate([108,93,0]) pinkie_full();
+  translate([108,93,0]) pinky_full();
   thumbs();
 }
 
@@ -160,13 +159,9 @@ module right_side () {
   }
 }
 
-*right_side();
-
 module left_side () {
   mirror([1,0,0]) right_side();
 }
-
-*left_side();
 
 module complete_2d () {
   difference () {
@@ -210,8 +205,6 @@ module standoffs () {
   }
 }
 
-*standoffs();
-
 module complete_interior_3d () {
   translate([0,0,-0.5]) {
     difference() {
@@ -241,7 +234,6 @@ module keyboard () {
   }
 }
 
-
 *keyboard();
 
 module holes () {
@@ -260,6 +252,7 @@ module plate () {
         linear_extrude(height-membrane) {
           difference() {
             complete_2d();
+            // cut out for USB plug
             translate([0,135,0]) square([15,10], center=true);
           }
         }  
@@ -272,10 +265,8 @@ module plate () {
   }
 }
 
-// top plate
+// top plate for 3D printing
 plate();
-
-*projection() keyboard();
 
 module pcb () {
   linear_extrude(pcb_height) {
