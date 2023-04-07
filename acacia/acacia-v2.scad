@@ -7,7 +7,7 @@ $fn = 128;
 // All constants are in mm
 height = 4.6;
 feet_height = 8;
-wall = 5;
+wall = 4;
 pcb_height = 1.2;
 mountin_hole = 3;
 membrane = 1;
@@ -31,7 +31,7 @@ module keyholder () {
       linear_extrude(h) {
         square(key_hole, center=true);
       }
-      // botton indent
+      // botton indent for lock
       linear_extrude(h-margin-key_tab_submersion) {
         mirror2([0,1,0]) {
           translate([0,-(key_hole+key_tab_indent)/2,0]) {
@@ -45,12 +45,13 @@ module keyholder () {
 
 module key (units) {
   union() {
+    keyholder();
+    // Outline of keycap, hidden by default
     *translate([0,0,height-1]) {
       linear_extrude(2) {
         square([key_distance*units-1,key_distance-1], center=true);
       }
     }
-    keyholder();
   }
 }
 
@@ -59,6 +60,11 @@ module array (count, distance) {
     translate([0,distance*i,0])
       children();
   }
+}
+
+module turn (degree) {
+  rotate([0,0,degree])
+    children();
 }
 
 module two_keys () {
@@ -71,45 +77,45 @@ module three_keys () {
     key(1);
 }
 
+module four_keys () {
+  three_keys();
+  translate([key_distance,key_distance,0]) turn(90) key(1.5);
+}
+
 module five_keys () {
   three_keys();
   translate([key_distance,key_distance/2,0]) two_keys();
 }
 
-module turn (degree) {
-  rotate([0,0,degree])
-    children();
-}
-
- module index_finger_full () {
-  turn(25) mirror([1,0,0]) five_keys();
+module index_finger_full () {
+  turn(15) mirror([1,0,0]) five_keys();
 }
 
 module middle_finger () {
-  turn(23) three_keys();
+  turn(15) three_keys();
 }
 
 module ring_finger () {
-  turn(20) three_keys();
+  turn(15) three_keys();
 }
 
 module pinkie_full () {
-  turn(15) five_keys();
+  turn(15) four_keys();
 }
 
 module thumbs () {
-  translate([86,77]) turn(9) key(1);
-  translate([59,69]) turn(25) key(1);
-  translate([38,60]) turn(-45) key(1.5);
-  translate([25,45]) turn(-38) key(1.25);
-  *translate([14,28]) turn(-29) key(1);
+  *translate([73.5,74]) turn(-75) key(1);
+  translate([71.7,80]) turn(-75) key(1.5);
+  translate([50,68]) turn(15) key(1);
+  translate([31.5,63]) turn(-75) key(1.5);
+  translate([13,58]) turn(-75) key(1);
 }
 
 module right_hand () {
-  translate([49,90,0]) index_finger_full();
-  translate([63.5,104,0]) middle_finger();
-  translate([84,104,0]) ring_finger();
-  translate([107,94,0]) pinkie_full();
+  translate([49,89,0]) index_finger_full();
+  translate([65.5,103,0]) middle_finger();
+  translate([86.5,99,0]) ring_finger();
+  translate([108,93,0]) pinkie_full();
   thumbs();
 }
 
@@ -117,16 +123,12 @@ module plate_2d () {
   minkowski() {
     difference() {
       union() {
-        //translate([5,5,0]) square([110,98]);
-        //translate([72.9,100]) circle(68);
-        translate([10,25,0]) square([100,70]);
-        translate([74,101]) circle(64);
+        translate([8,46,0]) square([100,82]);
+        translate([82,104]) circle(50);
       }
-      translate([106,-18,0]) circle(80);
-      //translate([145,50,0]) circle(40);
-      //translate([145,-34,0]) turn(40) square(100);
+      translate([98,-33,0]) circle(100);
     }
-    circle(5);
+    circle(7);
   }
 }
 
@@ -142,21 +144,12 @@ module interior_3d () {
   }
 }
 
-module flat_cable_3d () {
-  translate([65,160,-1]) {
-    linear_extrude(6) {
-      turn(0) square([15,15]);
-    }
-  }
-}
-
 module plate_3d () {
   difference() {
     linear_extrude(height+feet_height) {
       plate_2d();
     }
     interior_3d();
-    flat_cable_3d();
   }
 }
 
@@ -176,13 +169,18 @@ module left_side () {
 *left_side();
 
 module complete_2d () {
-  mirror2([1,0,0]) plate_2d();
   difference () {
-    translate([0,88,0]) square([35,135], center=true);
-    translate([0,150,0]) square([50,20], center=true);
+    union () {
+      mirror2([1,0,0]) plate_2d();
+      translate([0,87,0]) square([35,96], center=true);
+    }
+    *translate([0,133,0]) square([38,10], center=true);
+    *translate([-18,150,0]) circle(22);
+    *translate([18,150,0]) circle(22);
   }
-  translate([-10,20,0]) square(20);
 }
+
+*complete_2d();
 
 module standoff () {
   difference() {
@@ -196,15 +194,13 @@ module standoff () {
   }
 }
 
-*standoff();
-
 module standoffs_placement () {
   mirror2([1,0,0]) {
-    translate([16,31,0]) children();
-    translate([96,89,0]) children();
-    translate([113,135,0]) children();
-    translate([36,137,0]) children();
-    translate([38,74,0]) children();
+    translate([36,49,0]) children();
+    translate([93,84,0]) children();
+    translate([115,125,0]) children();
+    translate([70,143,0]) children();
+    translate([24,122,0]) children();
   }
 }
 
@@ -262,7 +258,10 @@ module plate () {
     union() {
       translate([0,0,membrane])
         linear_extrude(height-membrane) {
-          complete_2d();
+          difference() {
+            complete_2d();
+            translate([0,135,0]) square([15,10], center=true);
+          }
         }  
       translate([0,0,-membrane]) standoffs();
     }
@@ -273,23 +272,21 @@ module plate () {
   }
 }
 
-plate()
-
 // top plate
+plate();
+
 *projection() keyboard();
 
 module pcb () {
   linear_extrude(pcb_height) {
     difference() {
       offset(-wall-1) complete_2d();
-      projection(cut=true) standoffs();
+      projection(cut=true) holes();
     }
   }
 }
 
-*translate([0,0,feet_height - pcb_height]) pcb();
-
-// pcb key guide
+// guide for placing the switches & holes on the pcb
 *projection() difference() {
   pcb();
   mirror2([1,0,0]) {
@@ -297,6 +294,7 @@ module pcb () {
   }
 }
 
+// pcb outline
 *projection() {
   linear_extrude(pcb_height) {
     offset(-wall-1) complete_2d();
