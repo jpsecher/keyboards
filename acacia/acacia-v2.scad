@@ -266,7 +266,7 @@ module plate () {
 }
 
 // top plate for 3D printing
-plate();
+*plate();
 
 module pcb () {
   linear_extrude(pcb_height) {
@@ -286,7 +286,7 @@ module pcb () {
 }
 
 // pcb outline
-*projection() {
+projection() {
   linear_extrude(pcb_height) {
     offset(-wall-1) complete_2d();
   }
