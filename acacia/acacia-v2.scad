@@ -249,13 +249,17 @@ module plate () {
   difference() {
     union() {
       translate([0,0,membrane])
+      difference() {
         linear_extrude(height-membrane) {
-          difference() {
-            complete_2d();
-            // cut out for USB plug
+          complete_2d();
+        }
+        // cut out for USB plug
+        translate([0,0,-2]) {
+          linear_extrude(height-membrane) {
             translate([0,135,0]) square([15,10], center=true);
           }
-        }  
+        }
+      }  
       translate([0,0,-membrane]) standoffs();
     }
     holes();
@@ -266,7 +270,11 @@ module plate () {
 }
 
 // top plate for 3D printing
-*plate();
+plate();
+
+// trackpad
+*translate([0,85,0]) circle(20);
+
 
 module pcb () {
   linear_extrude(pcb_height) {
@@ -286,7 +294,7 @@ module pcb () {
 }
 
 // pcb outline
-projection() {
+*projection() {
   linear_extrude(pcb_height) {
     offset(-wall-1) complete_2d();
   }
