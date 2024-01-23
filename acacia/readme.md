@@ -32,3 +32,6 @@ As seen on the picture, the current layout for the alphas is [Minimak-6](http://
 
 - After finishing the prototypes, I discovered this repo: https://github.com/AlaaSaadAbdo/battoota/
 
+## Version 2
+
+The TM040040 trackpad needs the R1 (470k) resistor removed to use I2C and the R7 (0?) & R8 (0?) resistors removed for 5V.  The flex cable needed is 05-12-D-0050-A or another cable with contacts on oposite sides.
