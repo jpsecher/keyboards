@@ -163,6 +163,7 @@ module left_side () {
   mirror([1,0,0]) right_side();
 }
 
+// Complete 2D area without holes
 module complete_2d () {
   difference () {
     union () {
@@ -252,6 +253,12 @@ module plate () {
       difference() {
         linear_extrude(height-membrane) {
           complete_2d();
+        }
+        // cut out for flat cable
+        translate([0,0,-1]) {
+          linear_extrude(height-membrane + 2) {
+            translate([0,65,0]) square([12,8], center=true);
+          }
         }
         // cut out for USB plug
         translate([0,0,-2]) {
