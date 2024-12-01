@@ -19,6 +19,9 @@
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 #define CAPS_WORD_IDLE_TIMEOUT 10000
 
+// Navigation layer lock cancels after 10 seconds.
+#define LAYER_LOCK_IDLE_TIMEOUT 10000
+
 #undef RGB_MATRIX_TIMEOUT
 #define RGB_MATRIX_TIMEOUT 300000
 

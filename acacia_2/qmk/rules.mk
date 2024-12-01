@@ -1,0 +1,15 @@
+BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes       # Audio control and System control
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
+NKRO_ENABLE = no            # N-Key Rollover
+LTO_ENABLE = yes            # Link-time optimisation for smaller code
+CAPS_WORD_ENABLE = yes
+REPEAT_KEY_ENABLE = yes
+RGBLIGHT_ENABLE = yes
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = cirque_pinnacle_i2c
+CIRQUE_PINNACLE_ATTENUATION = EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_4X
+# POINTING_DEVICE_DRIVER = custom
+# PIMORONI_TRACKBALL_ADDRESS = 0x4A  # Grove Mini Track Ball
