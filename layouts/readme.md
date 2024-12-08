@@ -45,3 +45,12 @@ Alice: 62.56
 AcademicCost: 55.36
 Bigrams: 71.20
 CommonWords: 66.06
+
+## Engram
+
+b  y  o  u  .     l  d  w  v  z
+c  i  e  a  ,     h  t  s  n  q
+g  x  j  k           r  m  f  p
+
+## really?
+
